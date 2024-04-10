@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cloudy Weather Prediction Result</title>
+    <!-- Add any CSS styling if needed -->
+  </head>
+  <body>
+    <h1>Cloudy Weather Prediction Result</h1>
+
+    <p>
+      Original Weather: {% if cloud_percent > 90 %} Cloudy {% elif cloud_percent
+      > 70 %} Mostly Cloudy {% elif cloud_percent > 30 %} Partly Cloudy {% else
+      %} Clear {% endif %}
+    </p>
+
+    <p>
+      Predicted Weather: {% if prediction[0][0] >= 0.5 %} Cloudy {% elif
+      prediction[0][1] >= 0.5 %} Partly Cloudy {% else %} Not Cloudy {% endif %}
+    </p>
+
+    <!-- Add any other information or formatting as needed -->
+  </body>
+</html>
